@@ -44,12 +44,10 @@ while game_is_on:
         scoreboard.endGame()
         game_is_on = False
 
-    for p in snake.ps:
-        if p == snake.head:
-            pass
-        elif snake.head.distance(p) < 10:
-            game_is_on = False
-            scoreboard.endGame()
+    for p in snake.ps[1:]:
+        if snake.head.distance(p) < 10:
+           game_is_on = False
+           scoreboard.endGame()
 
 
 
