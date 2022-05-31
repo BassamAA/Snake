@@ -4,7 +4,6 @@ import random
 import time
 from food import Food
 from scoreboard import Scoreboard
-
 screen = Screen()
 screen.setup(600,600)
 screen.bgcolor("black")
@@ -46,10 +45,8 @@ while game_is_on:
 
     for p in snake.ps[1:]:
         if snake.head.distance(p) < 10:
-           game_is_on = False
-           scoreboard.endGame()
-
-
+            game_is_on = False
+            scoreboard.endGame()
 
 
 
